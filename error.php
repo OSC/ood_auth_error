@@ -82,14 +82,16 @@
 
     <h2><?= $config->title ?> Error</h2>
 
-    <div class="row">
-      <h3 class="text-center"><?= htmlspecialchars($_POST["error"]); ?></h3>
-    </div>
+    <div class="panel panel-danger">
 
-    <div class="container">
-      <pre>
+      <div class="panel-heading text-center">
+        <?= htmlspecialchars($_POST["error"]); ?>
+      </div>
+
+      <div class="panel-body">
         <?= htmlspecialchars($_POST["description"]); ?>
-      </pre>
+      </div>
+
     </div>
 
     <div class="text-center">
