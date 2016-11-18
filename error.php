@@ -80,22 +80,15 @@
 
   <div class="container">
 
-    <h2><?= $config->title ?> Error</h2>
+    <div class="jumbotron">
+      <h1>Error</h1>
+      <p>
+        <b><?= htmlspecialchars($_POST["error"]); ?></b> - <?= htmlspecialchars($_POST["description"]); ?>
+      </p>
+      <p>
+        Please contact <a href="<?= $config->help_website ?>"><?= $config->title ?></a> support at <a href="mailto:<?= $config->help_email ?>"><?= $config->help_email ?></a>
+      </p>
 
-    <div class="panel panel-danger">
-
-      <div class="panel-heading text-center">
-        <?= htmlspecialchars($_POST["error"]); ?>
-      </div>
-
-      <div class="panel-body">
-        <?= htmlspecialchars($_POST["description"]); ?>
-      </div>
-
-    </div>
-
-    <div class="text-center">
-      Please contact <a href="<?= $config->help_website ?>"><?= $config->title ?></a> support at <a href="mailto:<?= $config->help_email ?>"><?= $config->help_email ?></a>
     </div>
 
   </div>
